@@ -61,3 +61,6 @@ with tab2:
     if st.button("Analyze Sentiment"):
         sentiment = simple_sentiment(text)
         st.success(f"Market Sentiment: {sentiment}")
+# ---------- Info ----------
+st.write("---")
+st.write("Built as part of Crypto AI Lab using OpenGradient models.")
