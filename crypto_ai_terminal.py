@@ -70,3 +70,4 @@ if st.button("Analyze Sentiment"):
 # ---------- Info ----------
 st.write("---")
 st.write("Built as part of Crypto AI Lab using OpenGradient models.")
+Added portfolio tracker feature
