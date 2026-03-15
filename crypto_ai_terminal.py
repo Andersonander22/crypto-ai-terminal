@@ -70,4 +70,33 @@ if st.button("Analyze Sentiment"):
 # ---------- Info ----------
 st.write("---")
 st.write("Built as part of Crypto AI Lab using OpenGradient models.")
-Added portfolio tracker feature
+import streamlit as st
+from pycoingecko import CoinGeckoAPI
+
+# Initialize CoinGecko client
+cg = CoinGeckoAPI()
+
+st.title("💰 My Crypto Portfolio Tracker")
+
+# Let user input holdings
+btc_amount = st.number_input("Enter your BTC holdings:", min_value=0.0, format="%.6f")
+eth_amount = st.number_input("Enter your ETH holdings:", min_value=0.0, format="%.6f")
+
+# Fetch live prices
+prices = cg.get_price(ids=['bitcoin', 'ethereum'], vs_currencies='usd')
+
+btc_price = prices['bitcoin']['usd']
+eth_price = prices['ethereum']['usd']
+
+# Calculate portfolio value
+btc_value = btc_amount * btc_price
+eth_value = eth_amount * eth_price
+total_value = btc_value + eth_value
+
+# Display results
+st.subheader("📊 Portfolio Value")
+st.write(f"BTC Value: ${btc_value:,.2f}")
+st.write(f"ETH Value: ${eth_value:,.2f}")
+st.success(f"Total Portfolio Value: ${total_value:,.2f}")
+Updated with portfolio tracker feature
+
