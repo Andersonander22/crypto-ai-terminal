@@ -98,5 +98,4 @@ st.subheader("📊 Portfolio Value")
 st.write(f"BTC Value: ${btc_value:,.2f}")
 st.write(f"ETH Value: ${eth_value:,.2f}")
 st.success(f"Total Portfolio Value: ${total_value:,.2f}")
-Updated with portfolio tracker feature
 
