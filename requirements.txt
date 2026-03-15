@@ -1,3 +1,5 @@
 streamlit
+opengradient
+python-dotenv
 pycoingecko
-
+tweepy
