@@ -128,5 +128,4 @@ with tab4:
                 st.write("---")
         else:
             st.warning("Please enter a keyword.")
-st.write("---")
-st.write("Built as part of Crypto AI Lab using OpenGradient models.")
+Updated crypto_ai_terminal.py with working tabs and Tweet Analyzer
